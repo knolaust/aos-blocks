@@ -62,3 +62,7 @@ The AOS Blocks plugin is open-source software licensed under the ISC license.
 
 - AOS Library: [michalsnik/aos](https://github.com/michalsnik/aos)
 - Plugin Author: [Knol Aust](https://knolaust.com)
+
+== Screenshots ==
+1. AOS Animation settings in the Gutenberg editor.
+2. Another screenshot showcasing AOS Animation settings.
