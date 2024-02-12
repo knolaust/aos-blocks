@@ -1,5 +1,3 @@
-# aos-blocks
- Adds AOS animation controls to Gutenberg blocks.
 # AOS Blocks for WordPress
 
 AOS Blocks integrates the AOS (Animate On Scroll) library with WordPress, allowing users to easily add scroll animations to Gutenberg blocks. This plugin provides a straightforward way to enhance the visual appeal of your WordPress site with rich animations.
