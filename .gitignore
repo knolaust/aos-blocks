@@ -2,7 +2,7 @@
 # https://github.com/github/gitignore/blob/main/WordPress.gitignore
 
 .DS_Store
-/dist/*
+/dist/
 # Log files
 *.log
 
