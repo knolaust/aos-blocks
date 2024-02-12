@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: AOS Blocks
- * Plugin URI:  https://knolaust.com
+ * Plugin URI:  https://github.com/knolaust/aos-blocks
  * Description: Adds AOS animation controls to Gutenberg blocks.
  * Version:     1.0.0
  * Author:      Knol Aust
