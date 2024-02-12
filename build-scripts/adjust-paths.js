@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const filePath = path.join(__dirname, 'dist/aos-blocks.php');
+const filePath = path.join(__dirname, '../dist/aos-blocks.php');
 let content = fs.readFileSync(filePath, { encoding: 'utf8' });
 
 // Update asset paths to production paths in the dist directory
