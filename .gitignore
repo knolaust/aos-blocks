@@ -15,6 +15,3 @@
 .idea
 #ignore node_modules
 node_modules
-
-#Ignore zip files
-*.zip
