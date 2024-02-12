@@ -54,6 +54,13 @@ To set up for development:
 
 See `package.json` for all available scripts.
 
+## Screenshots
+
+1. AOS Animation settings in the Gutenberg editor.
+   ![AOS Animation settings in the Gutenberg editor](assets/screenshot-1.png)
+2. Another screenshot showcasing AOS Animation settings.
+   ![Another screenshot showcasing AOS Animation settings](assets/screenshot-2.png)
+
 ## License
 
 The AOS Blocks plugin is open-source software licensed under the ISC license.
@@ -62,7 +69,3 @@ The AOS Blocks plugin is open-source software licensed under the ISC license.
 
 - AOS Library: [michalsnik/aos](https://github.com/michalsnik/aos)
 - Plugin Author: [Knol Aust](https://knolaust.com)
-
-== Screenshots ==
-1. AOS Animation settings in the Gutenberg editor.
-2. Another screenshot showcasing AOS Animation settings.
