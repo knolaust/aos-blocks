@@ -40,7 +40,7 @@ The plugin allows customization of animation types, durations, and delays direct
 
 Contributions are welcome, and here are a few ways you can help improve the AOS Blocks plugin:
 
-- **Report Issues**: If you find a bug or have a feature request, please report it via the [Issues](https://knolaust.com/plugins/aos-blocks/issues) section.
+- **Report Issues**: If you find a bug or have a feature request, please report it via the [Issues](https://github.com/knolaust/aos-blocks/issues) section.
 - **Submit Pull Requests**: Feel free to fork the repository and submit pull requests with bug fixes or new features.
 
 ## Development
