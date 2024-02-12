@@ -1,0 +1,29 @@
+{
+  "name": "aos-blocks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "mkdirp dist/assets/js",
+    "build:js": "terser assets/js/aos-blocks.js -o dist/assets/js/aos-blocks.js --compress --mangle",
+    "build:css": "cleancss -o dist/assets/css/style.css assets/css/style.css",
+    "build:adjust-paths": "node adjust-paths.js",
+    "copy:aos": "cpy node_modules/aos/dist/aos.js dist/assets/js/ && cpy node_modules/aos/dist/aos.css dist/assets/css/",
+    "copy:plugin": "cpy *.php dist/",
+    "clean:dist": "rimraf dist",
+    "build": "npm run prebuild && npm run build:js && npm run build:css && npm run copy:aos && npm run copy:plugin && npm run build:adjust-paths && npm run zip",
+    "zip": "cd dist && bestzip ../dist/aos-blocks.zip ./*"
+  },
+  "keywords": [],
+  "author": "Knol Aust",
+  "license": "ISC",
+  "devDependencies": {
+    "aos": "^2.3.4",
+    "bestzip": "^2.1.7",
+    "clean-css-cli": "^5.4.2",
+    "cpy-cli": "^3.1.1",
+    "mkdirp": "^3.0.1",
+    "rimraf": "^3.0.2",
+    "terser": "^5.7.2"
+  }
+}
