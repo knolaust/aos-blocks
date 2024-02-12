@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prebuild": "mkdirp dist/assets/js",
+    "prebuild": "mkdirp dist/assets/js && mkdirp dist/assets/css",
     "build:js": "terser assets/js/aos-blocks.js -o dist/assets/js/aos-blocks.js --compress --mangle",
     "build:css": "cleancss -o dist/assets/css/style.css assets/css/style.css",
     "build:adjust-paths": "node adjust-paths.js",
@@ -12,7 +12,7 @@
     "copy:plugin": "cpy *.php dist/",
     "clean:dist": "rimraf dist",
     "build": "npm run prebuild && npm run build:js && npm run build:css && npm run copy:aos && npm run copy:plugin && npm run build:adjust-paths && npm run zip",
-    "zip": "cd dist && bestzip ../dist/aos-blocks.zip ./*"
+    "zip": "bestzip ./aos-blocks.zip ./dist/*"
   },
   "keywords": [],
   "author": "Knol Aust",
