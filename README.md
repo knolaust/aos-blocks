@@ -56,9 +56,9 @@ See `package.json` for all available scripts.
 
 ## Screenshots
 
-1. AOS Animation settings in the Gutenberg editor.
+### AOS Animation settings in the Gutenberg editor.
    ![AOS Animation settings in the Gutenberg editor](assets/screenshot-1.jpg)
-2. Another screenshot showcasing AOS Animation settings.
+### Another screenshot showcasing AOS Animation settings.
    ![Another screenshot showcasing AOS Animation settings](assets/screenshot-2.jpg)
 
 ## License
