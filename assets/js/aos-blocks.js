@@ -103,11 +103,11 @@
 
   addFilter(
     "blocks.registerBlockType",
-    "mytheme/add-aos-attribute",
+    "aols-blocks/add-aos-attribute",
     addAOSAttribute
   );
 
-  addFilter("editor.BlockEdit", "mytheme/with-aos-control", withAOSControl);
+  addFilter("editor.BlockEdit", "aols-blocks/with-aos-control", withAOSControl);
 
   // Apply AOS data attributes (animation and duration) to block save output
   function applyAOSExtraProps(extraProps, blockType, attributes) {
@@ -122,7 +122,7 @@
 
   wp.hooks.addFilter(
     "blocks.getSaveContent.extraProps",
-    "mytheme/apply-aos-extra-props",
+    "aols-blocks/apply-aos-extra-props",
     applyAOSExtraProps
   );
 })(window.wp);
