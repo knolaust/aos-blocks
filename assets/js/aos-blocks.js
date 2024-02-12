@@ -121,8 +121,21 @@
   }
 
   wp.hooks.addFilter(
-    "blocks.getSaveContent.extraProps",
-    "aols-blocks/apply-aos-extra-props",
-    applyAOSExtraProps
-  );
+    'blocks.getSaveContent.extraProps',
+    'aos-blocks/apply-aos-attributes',
+    (extraProps, blockType, attributes) => {
+      // Check if an AOS animation has been explicitly selected
+      if (attributes.aosAnimation && attributes.aosAnimation !== "") {
+        // Apply the animation type
+        extraProps['data-aos'] = attributes.aosAnimation;
+        
+        // Apply the duration only if an animation is selected
+        // Assuming you want to use a default duration when animation is selected
+        // or you could directly use attributes.aosDuration if it's ensured to be set when animation is selected
+        extraProps['data-aos-duration'] = attributes.aosDuration ? attributes.aosDuration.toString() : '400';
+      }
+      return extraProps;
+    }
+  );  
+  
 })(window.wp);
