@@ -2,7 +2,7 @@
 # https://github.com/github/gitignore/blob/main/WordPress.gitignore
 
 .DS_Store
-/dist/
+dist
 # Log files
 *.log
 
@@ -11,7 +11,5 @@
 .DS_Store
 #ignore vscode files
 .vscode
-#ignore phpstorm files
-.idea
 #ignore node_modules
 node_modules
