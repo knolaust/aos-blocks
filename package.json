@@ -14,7 +14,7 @@
   },
   "keywords": [],
   "author": "Knol Aust",
-  "license": "ISC",
+  "license": "GPL-3.0",
   "devDependencies": {
     "aos": "^2.3.4",
     "uglify-js": "^3.10.3",

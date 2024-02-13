@@ -71,7 +71,7 @@ See `package.json` for all available scripts.
 
 ## License
 
-The AOS Blocks plugin is open-source software licensed under the ISC license.
+The AOS Blocks plugin is open-source software licensed under the [GNU General Public License v3](https://www.gnu.org/licenses/gpl-3.0.html).
 
 ## Credits
 
