@@ -1,32 +1,23 @@
 {
   "name": "aos-blocks",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Adds AOS animation controls to Gutenberg blocks.",
+  "main": "aos-blocks.php",
   "scripts": {
-    "prebuild": "mkdirp dist/assets/js && mkdirp dist/assets/css",
-    "build:js": "terser assets/js/aos-blocks.js -o dist/assets/js/aos-blocks.js --compress --mangle",
-    "build:css": "cleancss -o dist/assets/css/style.css assets/css/style.css",
-    "build:adjust-paths": "node ./build-scripts/adjust-paths.js",
-    "convert-readme": "node ./build-scripts/convert-readme.js",
-    "copy:aos": "cpy node_modules/aos/dist/aos.js dist/assets/js/ && cpy node_modules/aos/dist/aos.css dist/assets/css/",
-    "copy:plugin": "cpy *.php dist/ && cpy readme.md dist/",
-    "copy:readme": "cpy readme.md dist/ && cpy readme.txt dist/",
-    "clean:dist": "rimraf dist",
-    "build": "npm run clean:dist && npm run prebuild && npm run build:js && npm run build:css && npm run copy:aos && npm run copy:plugin && npm run build:adjust-paths && npm run convert-readme && npm run copy:readme && npm run zip",
-    "zip": "bestzip ./aos-blocks.zip ./dist/*"
+    "prebuild": "mkdir -p assets/js && mkdir -p assets/css",
+    "build:css": "cleancss -o assets/css/aos-blocks.css node_modules/aos/dist/aos.css",
+    "build:js": "uglifyjs -o assets/js/aos-blocks.bundle.js assets/js/aos-blocks.js node_modules/aos/dist/aos.js",
+    "build": "npm run build:css && npm run build:js",
+    "build:dist": "npm run build && npm run build:dist:prepare && npm run build:dist:copy",
+    "build:dist:prepare": "mkdir -p dist && rm -rf dist/*",
+    "build:dist:copy": "cp aos-blocks.php dist/ && mkdir -p dist/assets/js && mkdir -p dist/assets/css && cp assets/js/aos-blocks.bundle.js dist/assets/js/ && cp assets/css/aos-blocks.css dist/assets/css/ && cd dist && zip -r aos-blocks.zip ."
   },
   "keywords": [],
   "author": "Knol Aust",
   "license": "ISC",
   "devDependencies": {
     "aos": "^2.3.4",
-    "bestzip": "^2.1.7",
-    "clean-css-cli": "^5.4.2",
-    "cpy-cli": "^3.1.1",
-    "marked": "^12.0.0",
-    "mkdirp": "^3.0.1",
-    "rimraf": "^3.0.2",
-    "terser": "^5.7.2"
+    "uglify-js": "^3.10.3",
+    "clean-css-cli": "^5.4.2"
   }
 }
