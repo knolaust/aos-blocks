@@ -22,6 +22,8 @@ AOS Blocks integrates the AOS (Animate On Scroll) library with WordPress, allowi
    - Extract the `aos-blocks.zip` file to your computer.
    - Upload the `aos-blocks` folder to the `/wp-content/plugins/` directory on your server.
    - Activate the plugin through the "Plugins" menu in WordPress.
+   
+   **Note**: Ensure your WordPress version is compatible with the plugin before installation. After installation, remember to activate the plugin in the "Plugins" menu.
 
 ## Usage
 
@@ -32,16 +34,18 @@ After installation, the AOS Blocks plugin automatically adds animation options t
 3. Find the AOS Animation settings.
 4. Choose an animation from the dropdown list.
 
+For more information on available AOS animations, visit [AOS GitHub repository](https://github.com/michalsnik/aos).
+
 ## Customization
 
 The plugin allows customization of animation types, durations, and delays directly from the Gutenberg editor, providing a user-friendly interface to make your website stand out.
 
 ## Contributing
 
-Contributions are welcome, and here are a few ways you can help improve the AOS Blocks plugin:
+Contributions are welcome! Here's how you can help improve the AOS Blocks plugin:
 
-- **Report Issues**: If you find a bug or have a feature request, please report it via the [Issues](https://github.com/knolaust/aos-blocks/issues) section.
-- **Submit Pull Requests**: Feel free to fork the repository and submit pull requests with bug fixes or new features.
+- **Report Issues**: If you find a bug or have a feature request, please report it via the [Issues](https://github.com/knolaust/aos-blocks/issues) section. Check existing issues to avoid duplicates.
+- **Submit Pull Requests**: Fork the repository, make your changes, and submit pull requests with bug fixes or new features. Ensure changes adhere to any coding standards or practices mentioned in the repository.
 
 ## Development
 
@@ -50,7 +54,8 @@ To set up for development:
 1. Clone the repository.
 2. Run `npm install` to install dependencies.
 3. Use the provided NPM scripts to build and test changes.
-`npm run build` will build the plugin files and create a `dist` folder along with a `aos-blocks.zip` file.
+   - `npm run build` will build the core plugin files for testing locally.
+   - `npm run build:dist` will generate a complete plugin folder along with a `aos-blocks.zip` file.
 
 See `package.json` for all available scripts.
 
@@ -58,8 +63,11 @@ See `package.json` for all available scripts.
 
 ### AOS Animation settings in the Gutenberg editor.
    ![AOS Animation settings in the Gutenberg editor](assets/screenshot-1.jpg)
+   Alt text: AOS Animation settings in the Gutenberg editor.
+
 ### Another screenshot showcasing AOS Animation settings.
    ![Another screenshot showcasing AOS Animation settings](assets/screenshot-2.jpg)
+   Alt text: Another screenshot showcasing AOS Animation settings.
 
 ## License
 
